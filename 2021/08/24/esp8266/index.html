@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="text, 操作系统 | 智能车 | STM32 | 物联网 | ESP8266">
+    <meta name="keywords" content="WSL 环境编译运行 ESP8266 RTOS SDK, 操作系统 | 智能车 | STM32 | 物联网 | ESP8266">
     <meta name="description" content="某位十八线程序员....">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>text | Pomin</title>
+    <title>WSL 环境编译运行 ESP8266 RTOS SDK | Pomin</title>
     <link rel="icon" type="image/png" href="/medias/pomin.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -222,12 +222,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">text</h1>
+                    <h1 class="description center-align post-title">WSL 环境编译运行 ESP8266 RTOS SDK</h1>
                 </div>
             </div>
         </div>
@@ -341,9 +341,17 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/ESP8266/">
+                                <span class="chip bg-color">ESP8266</span>
+                            </a>
+                        
+                            <a href="/tags/vscode/">
+                                <span class="chip bg-color">vscode</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -355,28 +363,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-08-21
+                    2021-08-24
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-08-21
+                    2021-08-24
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    0
+                    1.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    6 分
                 </div>
                 
 
@@ -399,7 +407,165 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h1 id="ESP8266-Linux子系统-WSL-编译环境搭建"><a href="#ESP8266-Linux子系统-WSL-编译环境搭建" class="headerlink" title="ESP8266-Linux子系统(WSL)编译环境搭建"></a>ESP8266-Linux子系统(WSL)编译环境搭建</h1><hr>
+<h2 id="安装、配置-wsl-我使用的是-Debian"><a href="#安装、配置-wsl-我使用的是-Debian" class="headerlink" title="安装、配置 wsl (我使用的是 Debian)"></a>安装、配置 wsl (我使用的是 Debian)</h2><ul>
+<li><p>安装 wsl<br><img src="/images/Debian.jpg" alt="Debian"></p>
+</li>
+<li><p>查看系统版本</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">cat &#x2F;etc&#x2F;os-release<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><img src="/images/os_ver.jpg" alt="^.^"></p>
+</li>
+<li><p>切换软件安装源 (这里使用清华镜像)<br><a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/help/debian/">https://mirrors.tuna.tsinghua.edu.cn/help/debian/</a><br><img src="/images/source.jpg" alt="^.^"></p>
+</li>
+<li><p>编辑 source.list</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">sudo nano &#x2F;etc&#x2F;apt&#x2F;sources.list<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><img src="/images/source-1.jpg" alt="^.^"></p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"># 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释
+deb http:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;debian&#x2F; bullseye main contrib non-free
+
+# deb-src http:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;debian&#x2F; bullseye main contrib non-free
+deb http:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;debian&#x2F; bullseye-updates main contrib non-free
+# deb-src http:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;debian&#x2F; bullseye-updates main contrib non-free
+
+deb http:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;debian&#x2F; bullseye-backports main contrib non-free
+# deb-src http:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;debian&#x2F; bullseye-backports main contrib non-free
+
+deb http:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;debian-security bullseye-security main contrib non-free
+# deb-src http:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;debian-security bullseye-security main contrib non-free<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ul>
+<hr>
+<h2 id="至此-wsl-安装已经完成，开始搭建-ESP8266-开发环境"><a href="#至此-wsl-安装已经完成，开始搭建-ESP8266-开发环境" class="headerlink" title="至此 wsl 安装已经完成，开始搭建 ESP8266 开发环境"></a>至此 wsl 安装已经完成，开始搭建 ESP8266 开发环境</h2><hr>
+<ul>
+<li>安装常用软件<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">sudo apt-get install gcc git wget make libncurses-dev flex bison gperf python python-serial<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li>报错<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">Note, selecting &#39;python-is-python2&#39; instead of &#39;python&#39;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li>暂时不管，这里切忌安装 python3，SDK 的构建工具是基于 python2 的！！</li>
+<li>这个版本的 python 没有自带 pip，这里手动安装一下</li>
+</ul>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"># 安装 python2 的 pip
+wget --no-check-certificate https:&#x2F;&#x2F;bootstrap.pypa.io&#x2F;ez_setup.py
+sudo python ez_setup.py --insecure
+wget https:&#x2F;&#x2F;pypi.python.org&#x2F;packages&#x2F;11&#x2F;b6&#x2F;abcb525026a4be042b486df43905d6893fb04f05aac21c32c638e939e447&#x2F;pip-9.0.1.tar.gz#md5&#x3D;35f01da33009719497f01a4ba69d63c9
+# 这里的 * 是通配符
+tar -xvf *.tar.gz
+cd pip*
+# 安装
+sudo python setup.py install
+ln -s &#x2F;usr&#x2F;local&#x2F;python27&#x2F;bin&#x2F;pip &#x2F;usr&#x2F;bin&#x2F;pip<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>尝试运行 pip –version 失败，原来是没有包含 pip 安装到的路径<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">export PATH&#x3D;$PATH:&#x2F;usr&#x2F;local&#x2F;bin<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li>安装完 pip 先更新一下<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">pip install --upgrade pip<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li>下载交叉编译工具 (放在到实体机，因为怕哪天wsl崩了，代码无了)</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://docs.espressif.com/projects/esp8266-rtos-sdk/en/latest/get-started/linux-setup.html">https://docs.espressif.com/projects/esp8266-rtos-sdk/en/latest/get-started/linux-setup.html</a></p>
+<ul>
+<li>下载 SDK (也放在实体机，时间比较长)<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">git clone --recursive https:&#x2F;&#x2F;github.com&#x2F;espressif&#x2F;ESP8266_RTOS_SDK.git<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li>git clone 有问题<blockquote>
+<p>由于 github 自 2021年8月 加强了安全的啥啥啥策略，不能随便 clone 了</p>
+</blockquote>
+</li>
+<li>这里配置一下 github 的个人信息<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">git config --global user.name  &quot;名字&quot;
+git config --global user.email &quot;邮箱&quot;
+# 看一下配置信息
+git config -l<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></li>
+<li>接着愉快的 clone</li>
+<li>下载完是这个样子滴…<br><img src="/images/folder.jpg" alt="^.^"></li>
+<li>在 wsl 中进入 SDK 的目录中安装一下 python 的依赖工具<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"># 安装依赖
+python -m pip install --user -r .&#x2F;requirements.txt<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
+<li>包含路径<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"># 我下载的 SDK 目录和交叉编译工具目录 (在实体机里)
+# wsl 下的 &#x2F;mnt&#x2F;f&#x2F;... 就是 Windows 中的 F:&#x2F;...
+# 执行下面两行
+export IDF_PATH&#x3D;&quot;&#x2F;mnt&#x2F;f&#x2F;MyEnv&#x2F;ESP8266&#x2F;ESP8266_RTOS_SDK&quot;
+export PATH&#x3D;$PATH:&#x2F;mnt&#x2F;f&#x2F;MyEnv&#x2F;ESP8266&#x2F;xtensa-lx106-elf&#x2F;bin
+# 有些教程是把 SDK 安装到了 ~&#x2F;esp8266 目录
+# export IDF_PATH&#x3D;&quot;$HOME&#x2F;esp8266&#x2F;ESP8266_RTOS_SDK&quot;
+# export PATH&#x3D;$PATH:$HOME&#x2F;esp8266&#x2F;xtensa-lx106-elf&#x2F;bin
+# pip
+export PATH&#x3D;$PATH:&#x2F;usr&#x2F;local&#x2F;bin
+
+# 添加 export和 path 到 shell 的环境中
+# IDF_PATH 添加到 ~&#x2F;.bashrc 或 ~&#x2F;.zshrc (zsh yyds !!)中
+export IDF_PATH&#x3D;&quot;&#x2F;mnt&#x2F;f&#x2F;MyEnv&#x2F;ESP8266&#x2F;ESP8266_RTOS_SDK&quot;
+# PATH 添加到 Windows 实体机环境变量中 (用户变量只需注销)
+export PATH&#x3D;$PATH:&#x2F;mnt&#x2F;f&#x2F;MyEnv&#x2F;ESP8266&#x2F;xtensa-lx106-elf&#x2F;bin<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+<li>Windows 实体机环境变量</li>
+</ul>
+<p><img src="/images/path.jpg" alt="^.^"></p>
+<ul>
+<li><p>进入 SDK 的例程中编译一下试试</p>
+</li>
+<li><p>配置串口</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">cd $IDF_PATH&#x2F;examples&#x2F;get-started&#x2F;hello_world
+make menuconfig<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<blockquote>
+<p>打开配置界面，需要控制台足够的大！！不然不运行</p>
+</blockquote>
+</li>
+<li><p>配置一下串口和波特率 (越高烧录越快)<br><img src="/images/com.jpg" alt="^.^"></p>
+</li>
+<li><p>我电脑的串口号是 COM27，所以 wsl 配置中串口就是 /dev/ttyS27，波特率设置成 921600，因为快！！<br><img src="/images/menu.jpg" alt="^.^"></p>
+</li>
+<li><p>编译一下</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">make -j8 all<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>编译成功后烧录</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">make flash<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><img src="/images/flash.jpg" alt="^.^"></p>
+</li>
+</ul>
+<hr>
+<h2 id="编译环境搭建完成，简单折腾折腾"><a href="#编译环境搭建完成，简单折腾折腾" class="headerlink" title="编译环境搭建完成，简单折腾折腾"></a>编译环境搭建完成，简单折腾折腾</h2><hr>
+<ul>
+<li><p>为了实现随时随地的编译某个工程 (就是带有sdkconfig文件的那些文件夹)写一个powershell的脚本来帮助编译</p>
+<ul>
+<li>pwd_build.ps1<pre class="line-numbers language-powershell" data-language="powershell"><code class="language-powershell"><span class="token comment"># 取绝对路径父路径</span>
+<span class="token variable">$path_abs</span> = <span class="token function">Split-Path</span> <span class="token operator">-</span>Parent <span class="token variable">$MyInvocation</span><span class="token punctuation">.</span>MyCommand<span class="token punctuation">.</span>Definition
+
+<span class="token comment"># 整理路径</span>
+<span class="token variable">$path_abs</span> = <span class="token variable">$path_abs</span> <span class="token operator">-replace</span> <span class="token string">"\\"</span><span class="token punctuation">,</span> <span class="token string">"/"</span>
+<span class="token variable">$path_abs</span> = <span class="token variable">$path_abs</span> <span class="token operator">-replace</span> <span class="token string">"C:"</span><span class="token punctuation">,</span> <span class="token string">"c"</span>
+<span class="token variable">$path_abs</span> = <span class="token variable">$path_abs</span> <span class="token operator">-replace</span> <span class="token string">"D:"</span><span class="token punctuation">,</span> <span class="token string">"d"</span>
+<span class="token variable">$path_abs</span> = <span class="token variable">$path_abs</span> <span class="token operator">-replace</span> <span class="token string">"E:"</span><span class="token punctuation">,</span> <span class="token string">"e"</span>
+<span class="token variable">$path_abs</span> = <span class="token variable">$path_abs</span> <span class="token operator">-replace</span> <span class="token string">"F:"</span><span class="token punctuation">,</span> <span class="token string">"f"</span>
+<span class="token variable">$path_abs</span> = <span class="token variable">$path_abs</span> <span class="token operator">-replace</span> <span class="token string">"G:"</span><span class="token punctuation">,</span> <span class="token string">"g"</span>
+<span class="token variable">$path_abs</span> = <span class="token variable">$path_abs</span> <span class="token operator">-replace</span> <span class="token string">"H:"</span><span class="token punctuation">,</span> <span class="token string">"h"</span>
+<span class="token variable">$path_abs</span> = <span class="token variable">$path_abs</span> <span class="token operator">-replace</span> <span class="token string">"I:"</span><span class="token punctuation">,</span> <span class="token string">"i"</span>
+<span class="token variable">$path_abs</span> = <span class="token variable">$path_abs</span> <span class="token operator">-replace</span> <span class="token string">"J:"</span><span class="token punctuation">,</span> <span class="token string">"j"</span>
+<span class="token variable">$path_abs</span> = <span class="token variable">$path_abs</span> <span class="token operator">-replace</span> <span class="token string">"K:"</span><span class="token punctuation">,</span> <span class="token string">"k"</span>
+<span class="token variable">$path_abs</span> = <span class="token string">"/mnt/"</span> <span class="token operator">+</span> <span class="token variable">$path_abs</span>
+<span class="token comment"># 在当前工作目录下运行绝对路径中的 build.sh</span>
+wsl <span class="token string">"<span class="token variable">$path_abs</span>/build.sh"</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+<li>build.sh<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">export IDF_PATH&#x3D;&quot;&#x2F;mnt&#x2F;f&#x2F;MyEnv&#x2F;ESP8266&#x2F;ESP8266_RTOS_SDK&quot;
+export PATH&#x3D;$PATH:&#x2F;mnt&#x2F;f&#x2F;MyEnv&#x2F;ESP8266&#x2F;xtensa-lx106-elf&#x2F;bin
+
+# make menuconfig
+make -j8 all
+make flash<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+</ul>
+</li>
+<li><p>把两个文件放在一起 (可以放在某个环境变量里打开powershell随处调用)<br><img src="/images/build.jpg" alt="^.^"></p>
+</li>
+<li><p>运行一下试试看</p>
+</li>
+<li><p>make menuconfig 正常<br><img src="/images/ps-1.jpg" alt="^.^"></p>
+</li>
+<li><p>make flash 正常<br><img src="/images/ps-2.jpg" alt="^.^"></p>
+</li>
+<li><p>这样就可以愉快的用VSCode写代码，用这个脚本编译了</p>
+</li>
+<li><p>配置一下 VSCode 的 tasks.json</p>
+</li>
+</ul>
+<p><img src="/images/code.png" alt="^.^"></p>
+<ul>
+<li>settings.json 中设置 powershell 为默认终端<pre class="line-numbers language-json" data-language="json"><code class="language-json"><span class="token property">"terminal.integrated.shell.windows"</span><span class="token operator">:</span> <span class="token string">"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"</span><span class="token punctuation">,</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li>Ctrl+Shift+B 运行编译任务</li>
+</ul>
+<p><img src="/images/vscode.jpg" alt="^.^"></p>
+<ul>
+<li>编译正常，可以愉快的写代码了</li>
+</ul>
+
                 
             </div>
             <hr/>
@@ -425,7 +591,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://pomin-163.github.io/2021/08/21/text/">https://pomin-163.github.io/2021/08/21/text/</a>
+                    <a href="https://pomin-163.github.io/2021/08/24/esp8266/">https://pomin-163.github.io/2021/08/24/esp8266/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -462,7 +628,15 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/ESP8266/">
+                                    <span class="chip bg-color">ESP8266</span>
+                                </a>
+                            
+                                <a href="/tags/vscode/">
+                                    <span class="chip bg-color">vscode</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -629,9 +803,60 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2021/08/24/esp8266/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="WSL 环境编译运行 ESP8266 RTOS SDK">
+                        
+                        <span class="card-title">WSL 环境编译运行 ESP8266 RTOS SDK</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            ESP8266-Linux子系统(WSL)编译环境搭建，VScode 开发ESP8266
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-24
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Pomin
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/ESP8266/">
+                        <span class="chip bg-color">ESP8266</span>
+                    </a>
+                    
+                    <a href="/tags/vscode/">
+                        <span class="chip bg-color">vscode</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/2021/08/24/hello-world/">
                     <div class="card-image">
@@ -649,45 +874,8 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-08-24
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            Pomin
-                            
-                        </span>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
-            </div>
-            <div class="card">
-                <a href="/2021/08/21/text/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="text">
-                        
-                        <span class="card-title">text</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-21
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-24
                             </span>
                         <span class="publish-author">
                             
@@ -697,7 +885,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
