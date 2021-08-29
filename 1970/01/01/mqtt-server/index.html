@@ -377,7 +377,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    230
+                    248
                 </div>
                 
 
@@ -426,7 +426,8 @@
 <h2 id="申请域名和-ssl-证书"><a href="#申请域名和-ssl-证书" class="headerlink" title="申请域名和 ssl 证书"></a>申请域名和 ssl 证书</h2><h3 id="万网申请域名"><a href="#万网申请域名" class="headerlink" title="万网申请域名"></a>万网申请域名</h3><p><a target="_blank" rel="noopener" href="https://wanwang.aliyun.com/">https://wanwang.aliyun.com/</a></p>
 <p><img src="/images/mqtt-server/site.jpg" alt="解析"></p>
 <h3 id="配置-ssl-证书，下载证书到本地"><a href="#配置-ssl-证书，下载证书到本地" class="headerlink" title="配置 ssl 证书，下载证书到本地"></a>配置 ssl 证书，下载证书到本地</h3><p><img src="/images/mqtt-server/ssl.jpg" alt="ssl"></p>
-<h2 id="配置-ssl-证书到emqx，配置-wss"><a href="#配置-ssl-证书到emqx，配置-wss" class="headerlink" title="配置 ssl 证书到emqx，配置 wss"></a>配置 ssl 证书到emqx，配置 wss</h2><h3 id="改写配置文件"><a href="#改写配置文件" class="headerlink" title="改写配置文件"></a>改写配置文件</h3><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">sudo nano &#x2F;etc&#x2F;emqx&#x2F;emqx.conf
+<h2 id="配置-ssl-证书到emqx，配置-wss"><a href="#配置-ssl-证书到emqx，配置-wss" class="headerlink" title="配置 ssl 证书到emqx，配置 wss"></a>配置 ssl 证书到emqx，配置 wss</h2><h3 id="上传证书到服务器"><a href="#上传证书到服务器" class="headerlink" title="上传证书到服务器"></a>上传证书到服务器</h3><p>这里上传到了 /etc/emqx/certs/<br><img src="/images/mqtt-server/upload.jpg" alt="上传证书"></p>
+<h3 id="改写配置文件"><a href="#改写配置文件" class="headerlink" title="改写配置文件"></a>改写配置文件</h3><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">sudo nano &#x2F;etc&#x2F;emqx&#x2F;emqx.conf
 # Ctrl+W 搜索 key.pem、cert.pem 改成 **.key、**.pem
 # **.key 和 **.pem 是下载下来的 ssl 证书中的两个文件<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <p><img src="/images/mqtt-server/config.jpg" alt="解析"></p>
