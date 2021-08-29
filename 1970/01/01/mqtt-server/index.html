@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, 操作系统 | 智能车 | STM32 | 物联网 | ESP8266">
+    <meta name="keywords" content="快速搭建一个 MQTT 服务器, 操作系统 | 智能车 | STM32 | 物联网 | ESP8266">
     <meta name="description" content="某位十八线程序员....">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | Pomin</title>
+    <title>快速搭建一个 MQTT 服务器 | Pomin</title>
     <link rel="icon" type="image/png" href="/medias/pomin.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -222,12 +222,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">快速搭建一个 MQTT 服务器</h1>
                 </div>
             </div>
         </div>
@@ -341,9 +341,17 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/MQTT/">
+                                <span class="chip bg-color">MQTT</span>
+                            </a>
+                        
+                            <a href="/tags/server/">
+                                <span class="chip bg-color">server</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -355,21 +363,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-08-24
+                    1970-01-01
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-08-24
+                    2021-08-29
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    73
+                    230
                 </div>
                 
 
@@ -399,19 +407,30 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+                <h2 id="OS版本"><a href="#OS版本" class="headerlink" title="OS版本"></a>OS版本</h2><p><img src="/images/mqtt-server/os.jpg" alt="OS版本"></p>
+<ul>
+<li>安装 emqx</li>
+<li>配置开放端口 (1883 8083 8084 18083)</li>
+<li>启动 emqx</li>
+<li>使用 emqx 自带的 Websocket 测试</li>
+<li>申请域名和 ssl 证书、设置域名解析</li>
+<li>配置 ssl 证书到emqx，配置 wss</li>
+</ul>
+<h2 id="安装-emqx"><a href="#安装-emqx" class="headerlink" title="安装 emqx"></a>安装 emqx</h2><p><a target="_blank" rel="noopener" href="https://www.emqx.com/zh/products/emqx">https://www.emqx.com/zh/products/emqx</a></p>
+<p>sh 脚本安装，不赘述</p>
+<h2 id="配置开放端口-1883-8083-8084-18083"><a href="#配置开放端口-1883-8083-8084-18083" class="headerlink" title="配置开放端口 (1883 8083 8084 18083)"></a>配置开放端口 (1883 8083 8084 18083)</h2><ul>
+<li>配置 腾讯云、阿里云等安全策略来开放端口</li>
+<li>如果安装了宝塔面板或服务器规则，要设置端口的放行<br><img src="/images/mqtt-server/port.jpg" alt="开放端口"><h2 id="启动-emqx"><a href="#启动-emqx" class="headerlink" title="启动 emqx"></a>启动 emqx</h2><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">sudo emqx start<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="使用-emqx-自带的-Websocket-测试"><a href="#使用-emqx-自带的-Websocket-测试" class="headerlink" title="使用 emqx 自带的 Websocket 测试"></a>使用 emqx 自带的 Websocket 测试</h2><img src="/images/mqtt-server/websocket.jpg" alt="测试"><h3 id="客户端"><a href="#客户端" class="headerlink" title="客户端"></a>客户端</h3><img src="/images/mqtt-server/message.jpg" alt="客户端"><h3 id="服务器端"><a href="#服务器端" class="headerlink" title="服务器端"></a>服务器端</h3><img src="/images/mqtt-server/message-1.jpg" alt="服务器端"></li>
+</ul>
+<h2 id="申请域名和-ssl-证书"><a href="#申请域名和-ssl-证书" class="headerlink" title="申请域名和 ssl 证书"></a>申请域名和 ssl 证书</h2><h3 id="万网申请域名"><a href="#万网申请域名" class="headerlink" title="万网申请域名"></a>万网申请域名</h3><p><a target="_blank" rel="noopener" href="https://wanwang.aliyun.com/">https://wanwang.aliyun.com/</a></p>
+<p><img src="/images/mqtt-server/site.jpg" alt="解析"></p>
+<h3 id="配置-ssl-证书，下载证书到本地"><a href="#配置-ssl-证书，下载证书到本地" class="headerlink" title="配置 ssl 证书，下载证书到本地"></a>配置 ssl 证书，下载证书到本地</h3><p><img src="/images/mqtt-server/ssl.jpg" alt="ssl"></p>
+<h2 id="配置-ssl-证书到emqx，配置-wss"><a href="#配置-ssl-证书到emqx，配置-wss" class="headerlink" title="配置 ssl 证书到emqx，配置 wss"></a>配置 ssl 证书到emqx，配置 wss</h2><h3 id="改写配置文件"><a href="#改写配置文件" class="headerlink" title="改写配置文件"></a>改写配置文件</h3><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">sudo nano &#x2F;etc&#x2F;emqx&#x2F;emqx.conf
+# Ctrl+W 搜索 key.pem、cert.pem 改成 **.key、**.pem
+# **.key 和 **.pem 是下载下来的 ssl 证书中的两个文件<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p><img src="/images/mqtt-server/config.jpg" alt="解析"></p>
+<h3 id="测试-wss-连接"><a href="#测试-wss-连接" class="headerlink" title="测试 wss 连接"></a>测试 wss 连接</h3><p><img src="/images/mqtt-server/ok-mqtt.jpg" alt="wss"></p>
 
                 
             </div>
@@ -438,7 +457,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://pomin-163.github.io/2021/08/24/hello-world/">https://pomin-163.github.io/2021/08/24/hello-world/</a>
+                    <a href="https://pomin-163.github.io/1970/01/01/mqtt-server/">https://pomin-163.github.io/1970/01/01/mqtt-server/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -475,7 +494,15 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/MQTT/">
+                                    <span class="chip bg-color">MQTT</span>
+                                </a>
+                            
+                                <a href="/tags/server/">
+                                    <span class="chip bg-color">server</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -646,7 +673,7 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/08/24/esp8266/">
+                <a href="/1970/01/01/esp8266/">
                     <div class="card-image">
                         
                         
@@ -663,7 +690,7 @@
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-08-24
+                            <i class="far fa-clock fa-fw icon-date"></i>1970-01-01
                         </span>
                         <span class="publish-author">
                             
@@ -692,27 +719,27 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+                本篇&nbsp;<i class="far fa-dot-circle"></i>
             </div>
             <div class="card">
-                <a href="/2021/08/21/text/">
+                <a href="/1970/01/01/mqtt-server/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="text">
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="快速搭建一个 MQTT 服务器">
                         
-                        <span class="card-title">text</span>
+                        <span class="card-title">快速搭建一个 MQTT 服务器</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            使用腾讯云服务器，ubuntu18 系统安装emqx，快速搭建一个 MQTT 服务器
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-21
+                                <i class="far fa-clock fa-fw icon-date"></i>1970-01-01
                             </span>
                         <span class="publish-author">
                             
@@ -721,6 +748,19 @@
                             
                         </span>
                     </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/MQTT/">
+                        <span class="chip bg-color">MQTT</span>
+                    </a>
+                    
+                    <a href="/tags/server/">
+                        <span class="chip bg-color">server</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -906,7 +946,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">1.4k</span>
+                        class="white-color">1.5k</span>
             
             
             

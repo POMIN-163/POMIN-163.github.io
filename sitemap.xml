@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://pomin-163.github.io/2021/08/24/esp8266/</loc>
+    <loc>https://pomin-163.github.io/1970/01/01/mqtt-server/</loc>
     
-    <lastmod>2021-08-23</lastmod>
+    <lastmod>2021-08-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://pomin-163.github.io/1970/01/01/esp8266/</loc>
+    
+    <lastmod>2021-08-29</lastmod>
     
   </url>
   
@@ -12,20 +19,6 @@
     <loc>https://pomin-163.github.io/rubbish/title.html</loc>
     
     <lastmod>2021-08-23</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://pomin-163.github.io/2021/08/24/hello-world/</loc>
-    
-    <lastmod>2021-08-23</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://pomin-163.github.io/2021/08/21/text/</loc>
-    
-    <lastmod>2021-08-21</lastmod>
     
   </url>
   
@@ -67,7 +60,7 @@
 
   <url>
     <loc>https://pomin-163.github.io/</loc>
-    <lastmod>2021-08-23</lastmod>
+    <lastmod>2021-08-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -75,14 +68,28 @@
   
   <url>
     <loc>https://pomin-163.github.io/tags/ESP8266/</loc>
-    <lastmod>2021-08-23</lastmod>
+    <lastmod>2021-08-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://pomin-163.github.io/tags/vscode/</loc>
-    <lastmod>2021-08-23</lastmod>
+    <lastmod>2021-08-29</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://pomin-163.github.io/tags/MQTT/</loc>
+    <lastmod>2021-08-29</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://pomin-163.github.io/tags/server/</loc>
+    <lastmod>2021-08-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
