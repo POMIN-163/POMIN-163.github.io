@@ -2,91 +2,160 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://pomin-163.gitee.io/2022/01/26/esp8266/</loc>
+    <loc>https://pomin.xyz/2022/01/28/useful-tools/</loc>
     
-    <lastmod>2022-01-26</lastmod>
+    <lastmod>2022-01-28</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://pomin-163.gitee.io/2022/01/26/mqtt-server/</loc>
+    <loc>https://pomin.xyz/2022/01/28/boot-repair/</loc>
     
-    <lastmod>2022-01-26</lastmod>
+    <lastmod>2022-01-28</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://pomin-163.gitee.io/about/index.html</loc>
+    <loc>https://pomin.xyz/2022/01/28/mqtt-server/</loc>
+    
+    <lastmod>2022-01-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://pomin.xyz/2022/01/28/next-plugins/</loc>
+    
+    <lastmod>2022-01-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://pomin.xyz/2022/01/28/hexo-theme-next/</loc>
+    
+    <lastmod>2022-01-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://pomin.xyz/categories/c51/index.html</loc>
+    
+    <lastmod>2022-01-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://pomin.xyz/2022/01/27/markdown-learn/</loc>
+    
+    <lastmod>2022-01-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://pomin.xyz/categories/index.html</loc>
+    
+    <lastmod>2022-01-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://pomin.xyz/tags/index.html</loc>
+    
+    <lastmod>2022-01-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://pomin.xyz/about/index.html</loc>
     
     <lastmod>2021-08-29</lastmod>
     
-  </url>
-  
-  <url>
-    <loc>https://pomin-163.gitee.io/404/index.html</loc>
-    
-    <lastmod>2021-08-21</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://pomin-163.gitee.io/tags/index.html</loc>
-    
-    <lastmod>2021-08-21</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://pomin-163.gitee.io/contact/index.html</loc>
-    
-    <lastmod>2021-08-21</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://pomin-163.gitee.io/categories/index.html</loc>
-    
-    <lastmod>2021-08-21</lastmod>
-    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
 
   <url>
-    <loc>https://pomin-163.gitee.io/</loc>
-    <lastmod>2022-01-26</lastmod>
+    <loc>https://pomin.xyz/</loc>
+    <lastmod>2022-01-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
-    <loc>https://pomin-163.gitee.io/tags/ESP8266/</loc>
-    <lastmod>2022-01-26</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
+    <loc>https://pomin.xyz/tags/MQTT/</loc>
+    <lastmod>2022-01-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://pomin-163.gitee.io/tags/vscode/</loc>
-    <lastmod>2022-01-26</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
+    <loc>https://pomin.xyz/tags/server/</loc>
+    <lastmod>2022-01-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://pomin-163.gitee.io/tags/MQTT/</loc>
-    <lastmod>2022-01-26</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
+    <loc>https://pomin.xyz/tags/linux/</loc>
+    <lastmod>2022-01-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://pomin-163.gitee.io/tags/server/</loc>
-    <lastmod>2022-01-26</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
+    <loc>https://pomin.xyz/tags/markdown/</loc>
+    <lastmod>2022-01-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://pomin.xyz/tags/linux%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/</loc>
+    <lastmod>2022-01-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
   </url>
   
 
+  
+  <url>
+    <loc>https://pomin.xyz/categories/linux/</loc>
+    <lastmod>2022-01-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://pomin.xyz/categories/linux/server/</loc>
+    <lastmod>2022-01-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://pomin.xyz/categories/other/</loc>
+    <lastmod>2022-01-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
   
 </urlset>
