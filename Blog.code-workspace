@@ -1,0 +1,23 @@
+{
+    "folders": [
+        {
+            "path": "."
+        }
+    ],
+    "settings": {
+        "files.exclude": {
+            "**/Objects": true,
+            "**/Listings": true,
+            "**/*.bat": true
+        },
+        "files.encoding": "utf8",
+        "editor.fontFamily": "Consolas, OPPOSans",
+        "files.associations": {
+            "*.cjson": "jsonc",
+            "*.wxss": "css",
+            "*.wxs": "javascript",
+            "string.h": "c",
+            "stdio.h": "c"
+        },
+    }
+}

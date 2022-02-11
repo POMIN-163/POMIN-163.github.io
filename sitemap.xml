@@ -2,6 +2,51 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://pomin.xyz/2022/02/11/cmake-learn/</loc>
+    
+    <lastmod>2022-02-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://pomin.xyz/2022/02/09/bat-workdir/</loc>
+    
+    <lastmod>2022-02-09</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://pomin.xyz/2022/02/08/regex-use/</loc>
+    
+    <lastmod>2022-02-08</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://pomin.xyz/2022/02/08/regex-learn/</loc>
+    
+    <lastmod>2022-02-08</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://pomin.xyz/2022/01/28/hexo-theme-next/</loc>
+    
+    <lastmod>2022-01-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://pomin.xyz/2022/01/28/useful-tools/</loc>
     
     <lastmod>2022-01-28</lastmod>
@@ -30,15 +75,6 @@
   
   <url>
     <loc>https://pomin.xyz/2022/01/28/next-plugins/</loc>
-    
-    <lastmod>2022-01-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://pomin.xyz/2022/01/28/hexo-theme-next/</loc>
     
     <lastmod>2022-01-28</lastmod>
     
@@ -94,7 +130,7 @@
 
   <url>
     <loc>https://pomin.xyz/</loc>
-    <lastmod>2022-01-28</lastmod>
+    <lastmod>2022-02-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -102,35 +138,56 @@
   
   <url>
     <loc>https://pomin.xyz/tags/MQTT/</loc>
-    <lastmod>2022-01-28</lastmod>
+    <lastmod>2022-02-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://pomin.xyz/tags/server/</loc>
-    <lastmod>2022-01-28</lastmod>
+    <lastmod>2022-02-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://pomin.xyz/tags/linux/</loc>
-    <lastmod>2022-01-28</lastmod>
+    <lastmod>2022-02-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://pomin.xyz/tags/markdown/</loc>
-    <lastmod>2022-01-28</lastmod>
+    <lastmod>2022-02-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://pomin.xyz/tags/linux%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/</loc>
-    <lastmod>2022-01-28</lastmod>
+    <lastmod>2022-02-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://pomin.xyz/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</loc>
+    <lastmod>2022-02-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://pomin.xyz/tags/%E6%89%B9%E5%A4%84%E7%90%86%E8%84%9A%E6%9C%AC/</loc>
+    <lastmod>2022-02-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://pomin.xyz/tags/CMake/</loc>
+    <lastmod>2022-02-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -139,21 +196,42 @@
   
   <url>
     <loc>https://pomin.xyz/categories/linux/</loc>
-    <lastmod>2022-01-28</lastmod>
+    <lastmod>2022-02-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://pomin.xyz/categories/linux/server/</loc>
-    <lastmod>2022-01-28</lastmod>
+    <lastmod>2022-02-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://pomin.xyz/categories/other/</loc>
-    <lastmod>2022-01-28</lastmod>
+    <lastmod>2022-02-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://pomin.xyz/categories/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</loc>
+    <lastmod>2022-02-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://pomin.xyz/categories/%E6%89%B9%E5%A4%84%E7%90%86%E8%84%9A%E6%9C%AC/</loc>
+    <lastmod>2022-02-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://pomin.xyz/categories/CMake/</loc>
+    <lastmod>2022-02-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
