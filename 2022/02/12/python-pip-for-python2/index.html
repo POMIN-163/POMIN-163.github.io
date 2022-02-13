@@ -22,39 +22,28 @@
   <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"pomin.xyz","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.9.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":"enable","bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":true,"nav":null},"stickytabs":true,"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1}}</script><script src="/js/config.js"></script>
-<meta name="description" content="💿安装sudo apt install mc ncdu htop exa duf proxychains zsh -y  mc   : 文件管理">
+<meta name="description" content="问题引出：部分 linux 系统默认安装 python2.7 可能不带 pip 包管理器   pip (python3) 安装方式 python3 一般自带有 pip  # 下载脚本 wget https:&#x2F;&#x2F;bootstrap.pypa.io&#x2F;get-pip.py # 安装 python get-pip.py --force-reinstall  pip (python2) 安装方式wget -">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux系统的一些增强工具">
-<meta property="og:url" content="https://pomin.xyz/2022/01/28/useful-tools/index.html">
+<meta property="og:title" content="Python2.7 安装 pip">
+<meta property="og:url" content="https://pomin.xyz/2022/02/12/python-pip-for-python2/index.html">
 <meta property="og:site_name" content="Pomin&#39;s Blog">
-<meta property="og:description" content="💿安装sudo apt install mc ncdu htop exa duf proxychains zsh -y  mc   : 文件管理">
+<meta property="og:description" content="问题引出：部分 linux 系统默认安装 python2.7 可能不带 pip 包管理器   pip (python3) 安装方式 python3 一般自带有 pip  # 下载脚本 wget https:&#x2F;&#x2F;bootstrap.pypa.io&#x2F;get-pip.py # 安装 python get-pip.py --force-reinstall  pip (python2) 安装方式wget -">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://pomin.xyz/images/useful-tools/mc.jpg">
-<meta property="og:image" content="https://pomin.xyz/images/useful-tools/ncdu.jpg">
-<meta property="og:image" content="https://pomin.xyz/images/useful-tools/htop.jpg">
-<meta property="og:image" content="https://pomin.xyz/images/useful-tools/exa.jpg">
-<meta property="og:image" content="https://pomin.xyz/images/useful-tools/duf.jpg">
-<meta property="og:image" content="https://pomin.xyz/images/useful-tools/proxychains.jpg">
-<meta property="og:image" content="https://pomin.xyz/images/useful-tools/zsh.jpg">
-<meta property="og:image" content="https://pomin.xyz/images/useful-tools/oh-my-zsh.jpg">
-<meta property="og:image" content="https://pomin.xyz/images/useful-tools/zsh-theme.jpg">
-<meta property="og:image" content="https://pomin.xyz/images/useful-tools/kde.jpg">
-<meta property="article:published_time" content="2022-01-28T10:07:14.382Z">
-<meta property="article:modified_time" content="2022-01-28T10:07:14.382Z">
+<meta property="article:published_time" content="2022-02-12T13:32:10.191Z">
+<meta property="article:modified_time" content="2022-02-12T13:32:10.191Z">
 <meta property="article:author" content="Pomin">
-<meta property="article:tag" content="linux">
+<meta property="article:tag" content="Python">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://pomin.xyz/images/useful-tools/mc.jpg">
 
 
-<link rel="canonical" href="https://pomin.xyz/2022/01/28/useful-tools/">
+<link rel="canonical" href="https://pomin.xyz/2022/02/12/python-pip-for-python2/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://pomin.xyz/2022/01/28/useful-tools/","path":"2022/01/28/useful-tools/","title":"Linux系统的一些增强工具"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://pomin.xyz/2022/02/12/python-pip-for-python2/","path":"2022/02/12/python-pip-for-python2/","title":"Python2.7 安装 pip"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Linux系统的一些增强工具 | Pomin's Blog</title>
+<title>Python2.7 安装 pip | Pomin's Blog</title>
   
 
 
@@ -175,7 +164,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%F0%9F%92%BF%E5%AE%89%E8%A3%85"><span class="nav-number">1.</span> <span class="nav-text">💿安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#mc-%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86"><span class="nav-number">2.</span> <span class="nav-text">mc   : 文件管理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ncdu-%E6%96%87%E4%BB%B6%E5%A4%B9%E5%A4%A7%E5%B0%8F-du-%E5%A2%9E%E5%BC%BA%E7%89%88"><span class="nav-number">3.</span> <span class="nav-text">ncdu : 文件夹大小 du 增强版</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#htop-%E8%BF%9B%E7%A8%8B%E7%9B%91%E8%A7%86-top-%E5%A2%9E%E5%BC%BA%E7%89%88"><span class="nav-number">4.</span> <span class="nav-text">htop : 进程监视 top 增强版</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#exa-%E5%88%97%E4%B8%BE%E6%96%87%E4%BB%B6-ls-%E5%A2%9E%E5%BC%BA%E7%89%88"><span class="nav-number">5.</span> <span class="nav-text">exa  : 列举文件 ls 增强版</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#duf-%E5%88%97%E4%B8%BE%E5%88%86%E5%8C%BA-df-%E5%A2%9E%E5%BC%BA%E7%89%88"><span class="nav-number">6.</span> <span class="nav-text">duf  : 列举分区 df 增强版</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#proxychains-%E7%AE%80%E6%98%93%E4%BB%A3%E7%90%86%E5%B7%A5%E5%85%B7"><span class="nav-number">7.</span> <span class="nav-text">proxychains : 简易代理工具</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#zsh-%E7%BB%88%E7%AB%AF%E5%BC%BA%E5%8C%96%E5%B7%A5%E5%85%B7"><span class="nav-number">8.</span> <span class="nav-text">zsh  : 终端强化工具</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#oh-my-zsh-%E7%BB%88%E7%AB%AF%E5%BC%BA%E5%8C%96%E7%A5%9E%E5%99%A8"><span class="nav-number">9.</span> <span class="nav-text">oh-my-zsh : 终端强化神器</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-number">9.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8B%93%E5%B1%95"><span class="nav-number">9.2.</span> <span class="nav-text">拓展</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BB%E9%A2%98"><span class="nav-number">9.3.</span> <span class="nav-text">主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BA%94%E7%94%A8%E8%AE%BE%E7%BD%AE-%EF%BC%81%EF%BC%81%EF%BC%81%EF%BC%81"><span class="nav-number">9.4.</span> <span class="nav-text">应用设置 ！！！！</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#KDE-%E6%A1%8C%E9%9D%A2%E7%8E%AF%E5%A2%83"><span class="nav-number">10.</span> <span class="nav-text">KDE : 桌面环境</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#pip-python3-%E5%AE%89%E8%A3%85%E6%96%B9%E5%BC%8F"><span class="nav-number">1.</span> <span class="nav-text">pip (python3) 安装方式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#pip-python2-%E5%AE%89%E8%A3%85%E6%96%B9%E5%BC%8F"><span class="nav-number">2.</span> <span class="nav-text">pip (python2) 安装方式</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -190,18 +179,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">10</span>
+          <span class="site-state-item-count">14</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-count">11</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -265,7 +254,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://pomin.xyz/2022/01/28/useful-tools/">
+    <link itemprop="mainEntityOfPage" href="https://pomin.xyz/2022/02/12/python-pip-for-python2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/m.jpg">
@@ -278,7 +267,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Linux系统的一些增强工具
+          Python2.7 安装 pip
         </h1>
 
         <div class="post-meta-container">
@@ -289,7 +278,7 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2022-01-28 18:07:14" itemprop="dateCreated datePublished" datetime="2022-01-28T18:07:14+08:00">2022-01-28</time>
+      <time title="创建时间：2022-02-12 21:32:10" itemprop="dateCreated datePublished" datetime="2022-02-12T21:32:10+08:00">2022-02-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -297,7 +286,7 @@
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/linux/" itemprop="url" rel="index"><span itemprop="name">linux</span></a>
+          <a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a>
         </span>
     </span>
 
@@ -308,7 +297,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>880</span>
+      <span>481</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -326,48 +315,29 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="💿安装"><a href="#💿安装" class="headerlink" title="💿安装"></a>💿安装</h1><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">sudo apt install mc ncdu htop exa duf proxychains zsh -y<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+        <div class="note default"><p>问题引出：部分 linux 系统默认安装 python2.7 可能不带 pip 包管理器</p>
+</div>
 
-<h1 id="mc-文件管理"><a href="#mc-文件管理" class="headerlink" title="mc   : 文件管理"></a>mc   : 文件管理</h1><p><img src="/images/useful-tools/mc.jpg" alt="-" loading="lazy"></p>
-<span id="more"></span>
+<h1 id="pip-python3-安装方式"><a href="#pip-python3-安装方式" class="headerlink" title="pip (python3) 安装方式"></a>pip (python3) 安装方式</h1><blockquote>
+<p>python3 一般自带有 pip</p>
+</blockquote>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 下载脚本</span>
+<span class="token function">wget</span> https://bootstrap.pypa.io/get-pip.py
+<span class="token comment"># 安装</span>
+python get-pip.py --force-reinstall<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h1 id="ncdu-文件夹大小-du-增强版"><a href="#ncdu-文件夹大小-du-增强版" class="headerlink" title="ncdu : 文件夹大小 du 增强版"></a>ncdu : 文件夹大小 du 增强版</h1><p><img src="/images/useful-tools/ncdu.jpg" alt="-" loading="lazy"></p>
-<h1 id="htop-进程监视-top-增强版"><a href="#htop-进程监视-top-增强版" class="headerlink" title="htop : 进程监视 top 增强版"></a>htop : 进程监视 top 增强版</h1><p><img src="/images/useful-tools/htop.jpg" alt="-" loading="lazy"></p>
-<h1 id="exa-列举文件-ls-增强版"><a href="#exa-列举文件-ls-增强版" class="headerlink" title="exa  : 列举文件 ls 增强版"></a>exa  : 列举文件 ls 增强版</h1><p><img src="/images/useful-tools/exa.jpg" alt="-" loading="lazy"></p>
-<h1 id="duf-列举分区-df-增强版"><a href="#duf-列举分区-df-增强版" class="headerlink" title="duf  : 列举分区 df 增强版"></a>duf  : 列举分区 df 增强版</h1><p><img src="/images/useful-tools/duf.jpg" alt="-" loading="lazy"></p>
-<h1 id="proxychains-简易代理工具"><a href="#proxychains-简易代理工具" class="headerlink" title="proxychains : 简易代理工具"></a>proxychains : 简易代理工具</h1><p><img src="/images/useful-tools/proxychains.jpg" alt="-" loading="lazy"></p>
-<h1 id="zsh-终端强化工具"><a href="#zsh-终端强化工具" class="headerlink" title="zsh  : 终端强化工具"></a>zsh  : 终端强化工具</h1><p><img src="/images/useful-tools/zsh.jpg" alt="-" loading="lazy"></p>
-<hr>
-<h1 id="oh-my-zsh-终端强化神器"><a href="#oh-my-zsh-终端强化神器" class="headerlink" title="oh-my-zsh : 终端强化神器"></a>oh-my-zsh : 终端强化神器</h1><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">---
+<h1 id="pip-python2-安装方式"><a href="#pip-python2-安装方式" class="headerlink" title="pip (python2) 安装方式"></a>pip (python2) 安装方式</h1><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">wget</span> --no-check-certificate https://bootstrap.pypa.io/ez_setup.py
+python ez_setup.py --insecure
+<span class="token comment"># 下载脚本</span>
+<span class="token function">wget</span> https://pypi.python.org/packages/11/b6/abcb525026a4be042b486df43905d6893fb04f05aac21c32c638e939e447/pip-9.0.1.tar.gz<span class="token comment">#md5=35f01da33009719497f01a4ba69d63c9</span>
+<span class="token comment"># 解压</span>
+<span class="token function">tar</span> -xvf *.tar.gz
+<span class="token comment"># 进入目录</span>
+<span class="token builtin class-name">cd</span> pip*
+<span class="token comment"># 安装</span>
+python setup.py <span class="token function">install</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-# sh 一键安装
-sh -c &quot;$(wget https:&#x2F;&#x2F;raw.github.com&#x2F;robbyrussell&#x2F;oh-my-zsh&#x2F;master&#x2F;tools&#x2F;install.sh -O -)&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h2><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">---
-
-# 自动补全
-proxychains git clone https:&#x2F;&#x2F;github.com&#x2F;zsh-users&#x2F;zsh-autosuggestions $ZSH_CUSTOM&#x2F;plugins&#x2F;zsh-autosuggestions
----
-
-# 语法高亮
-proxychains git clone https:&#x2F;&#x2F;github.com&#x2F;zsh-users&#x2F;zsh-syntax-highlighting.git $ZSH_CUSTOM&#x2F;plugins&#x2F;zsh-syntax-highlighting
----
-
-# 添加到 ~&#x2F;.zshrc
-nano ~&#x2F;.zshrc<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p><img src="/images/useful-tools/oh-my-zsh.jpg" alt="-" loading="lazy"></p>
-<h2 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h2><p>我使用的是 passion: <a target="_blank" rel="noopener" href="https://github.com/ChesterYue/ohmyzsh-theme-passion">https://github.com/ChesterYue/ohmyzsh-theme-passion</a></p>
-<p><img src="/images/useful-tools/zsh-theme.jpg" alt="-" loading="lazy"></p>
-<p>更多主题在: <a target="_blank" rel="noopener" href="https://github.com/ohmyzsh/ohmyzsh/wiki/External-themes">https://github.com/ohmyzsh/ohmyzsh/wiki/External-themes</a></p>
-<h2 id="应用设置-！！！！"><a href="#应用设置-！！！！" class="headerlink" title="应用设置 ！！！！"></a>应用设置 ！！！！</h2><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">source ~&#x2F;.zshrc<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<hr>
-<h1 id="KDE-桌面环境"><a href="#KDE-桌面环境" class="headerlink" title="KDE : 桌面环境"></a>KDE : 桌面环境</h1><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"># 简约版
-sudo apt install kde-plasma-desktop
-# 完整版
-# sudo apt install kubuntu-desktop<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p><img src="/images/useful-tools/kde.jpg" alt="-" loading="lazy"></p>
 <p>⚡⚡⚡ OVER ⚡⚡⚡</p>
 
     </div>
@@ -404,7 +374,7 @@ sudo apt install kde-plasma-desktop
   </li>
   <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://pomin.xyz/2022/01/28/useful-tools/" title="Linux系统的一些增强工具">https://pomin.xyz/2022/01/28/useful-tools/</a>
+      <a href="https://pomin.xyz/2022/02/12/python-pip-for-python2/" title="Python2.7 安装 pip">https://pomin.xyz/2022/02/12/python-pip-for-python2/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -413,20 +383,20 @@ sudo apt install kde-plasma-desktop
 </div>
 
           <div class="post-tags">
-              <a href="/tags/linux/" rel="tag"><i class="fa fa-tag"></i> linux</a>
+              <a href="/tags/Python/" rel="tag"><i class="fa fa-tag"></i> Python</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2022/01/28/boot-repair/" rel="prev" title="Linux系统启动修复工具——boot-repair">
-                  <i class="fa fa-chevron-left"></i> Linux系统启动修复工具——boot-repair
+                <a href="/2022/02/12/wsl-wsl2-install/" rel="prev" title="WSL2安装出现Error:0x80370102 ???????????????????">
+                  <i class="fa fa-chevron-left"></i> WSL2安装出现Error:0x80370102 ???????????????????
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2022/01/28/hexo-theme-next/" rel="next" title="Welcome to my blog site ~~">
-                  Welcome to my blog site ~~ <i class="fa fa-chevron-right"></i>
+                <a href="/2022/02/12/linux-root-user/" rel="next" title="Linux 赋予用户 root 权限，设置 root 密码">
+                  Linux 赋予用户 root 权限，设置 root 密码 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
@@ -459,13 +429,13 @@ sudo apt install kde-plasma-desktop
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">19k</span>
+    <span title="站点总字数">20k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">17 分钟</span>
+    <span title="站点阅读时长">18 分钟</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动

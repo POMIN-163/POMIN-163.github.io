@@ -6,7 +6,7 @@
   <link href="https://pomin.xyz/atom.xml" rel="self"/>
   
   <link href="https://pomin.xyz/"/>
-  <updated>2022-02-11T05:31:49.723Z</updated>
+  <updated>2022-02-13T07:48:50.217Z</updated>
   <id>https://pomin.xyz/</id>
   
   <author>
@@ -15,6 +15,117 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Python 写的一个串口插入监测工具</title>
+    <link href="https://pomin.xyz/2022/02/13/python-serial-tipserial/"/>
+    <id>https://pomin.xyz/2022/02/13/python-serial-tipserial/</id>
+    <published>2022-02-13T07:48:50.217Z</published>
+    <updated>2022-02-13T07:48:50.217Z</updated>
+    
+    
+    
+    
+    <category term="Python" scheme="https://pomin.xyz/categories/Python/"/>
+    
+    
+    <category term="串口工具" scheme="https://pomin.xyz/tags/%E4%B8%B2%E5%8F%A3%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux系统的一些增强工具</title>
+    <link href="https://pomin.xyz/2022/02/13/linux-useful-tools/"/>
+    <id>https://pomin.xyz/2022/02/13/linux-useful-tools/</id>
+    <published>2022-02-13T02:41:34.410Z</published>
+    <updated>2022-02-13T02:41:34.410Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="💿安装"><a href="#💿安装" class="headerlink" title="💿安装"></a>💿安装</h1><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> <span class="token function">mc</span> ncdu <span class="token function">htop</span> exa duf proxychains -y<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><span id="more"></span><h2 id="mc-文件管理"><a href="#mc-文件管理" class="headerlink" title="mc   : 文件管理"></a>mc   : 文件管理</h2><p><img src="/images/useful-tools/mc.jpg" alt="-" loading="lazy"></p><h2 id="ncdu-文件夹大小-du-增强版"><a href="#ncdu-文件夹大小-du-增强版" class="headerlink" title="ncdu : 文件夹大小 du 增强版"></a>ncdu : 文件夹大小 du 增强版</h2><p><img src="/images/useful-tools/ncdu.jpg" alt="-" loading="lazy"></p><h2 id="htop-进程监视-top-增强版"><a href="#htop-进程监视-top-增强版" class="headerlink" title="htop : 进程监视 top 增强版"></a>htop : 进程监视 top 增强版</h2><p><img src="/images/useful-tools/htop.jpg" alt="-" loading="lazy"></p><h2 id="exa-列举文件-ls-增强版"><a href="#exa-列举文件-ls-增强版" class="headerlink" title="exa  : 列举文件 ls 增强版"></a>exa  : 列举文件 ls 增强版</h2><p><img src="/images/useful-tools/exa.jpg" alt="-" loading="lazy"></p><h2 id="duf-列举分区-df-增强版"><a href="#duf-列举分区-df-增强版" class="headerlink" title="duf  : 列举分区 df 增强版"></a>duf  : 列举分区 df 增强版</h2><p><img src="/images/useful-tools/duf.jpg" alt="-" loading="lazy"></p><h2 id="proxychains-简易代理工具"><a href="#proxychains-简易代理工具" class="headerlink" title="proxychains : 简易代理工具"></a>proxychains : 简易代理工具</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 改代理设置，最下面一行</span><span class="token function">sudo</span> <span class="token function">nano</span> /etc/proxychains.conf<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p><img src="/images/useful-tools/proxychains.jpg" alt="-" loading="lazy"></p><hr><h1 id="oh-my-zsh-终端强化神器"><a href="#oh-my-zsh-终端强化神器" class="headerlink" title="oh-my-zsh : 终端强化神器"></a>oh-my-zsh : 终端强化神器</h1><ul><li>安装</li></ul><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># sh 一键安装</span><span class="token function">sh</span> -c <span class="token string">"<span class="token variable"><span class="token variable">$(</span><span class="token function">wget</span> https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -<span class="token variable">)</span></span>"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><ul><li>拓展</li></ul><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 自动补全</span>proxychains <span class="token function">git</span> clone https://github.com/zsh-users/zsh-autosuggestions <span class="token variable">$ZSH_CUSTOM</span>/plugins/zsh-autosuggestions<span class="token comment"># 语法高亮</span>proxychains <span class="token function">git</span> clone https://github.com/zsh-users/zsh-syntax-highlighting.git <span class="token variable">$ZSH_CUSTOM</span>/plugins/zsh-syntax-highlighting<span class="token comment"># 添加到 ~/.zshrc</span><span class="token function">nano</span> ~/.zshrc<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><img src="/images/useful-tools/oh-my-zsh.jpg" alt="-" loading="lazy"></p><ul><li>主题</li></ul><p>我使用的是 passion: <a href="https://github.com/ChesterYue/ohmyzsh-theme-passion">https://github.com/ChesterYue/ohmyzsh-theme-passion</a></p><p><img src="/images/useful-tools/zsh-theme.jpg" alt="-" loading="lazy"></p><p>更多主题在: <a href="https://github.com/ohmyzsh/ohmyzsh/wiki/External-themes">https://github.com/ohmyzsh/ohmyzsh/wiki/External-themes</a></p><ul><li>应用设置 ！！！！</li></ul><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">source</span> ~/.zshrc<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><hr><h1 id="KDE-桌面环境"><a href="#KDE-桌面环境" class="headerlink" title="KDE : 桌面环境"></a>KDE : 桌面环境</h1><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 简约版</span><span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> kde-plasma-desktop<span class="token comment"># 完整版</span><span class="token comment"># sudo apt install kubuntu-desktop</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><p><img src="/images/useful-tools/kde.jpg" alt="-" loading="lazy"></p><h1 id="clash-——-代理工具"><a href="#clash-——-代理工具" class="headerlink" title="clash  —— 代理工具"></a>clash  —— 代理工具</h1><ul><li>下载配置文件</li></ul><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token comment"># 链接要从相关网站中获取</span><span class="token function">wget</span> -O config.yaml <span class="token string">".............."</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><ul><li>直接运行 ( 不推荐 )</li></ul><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">./clash /d <span class="token builtin class-name">.</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>mmdb 文件下载失败时使用 wget 下载 mmdb 文件</li></ul><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">wget</span> ****.mmdb<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>写系统服务文件 clash.service ( 推荐 )</li></ul><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token punctuation">[</span>Unit<span class="token punctuation">]</span><span class="token assign-left variable">Description</span><span class="token operator">=</span>clash<span class="token assign-left variable">Documentation</span><span class="token operator">=</span>https://<span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token assign-left variable">After</span><span class="token operator">=</span>network.target<span class="token assign-left variable">Wants</span><span class="token operator">=</span>network.target<span class="token punctuation">[</span>Service<span class="token punctuation">]</span><span class="token assign-left variable">WorkingDirectory</span><span class="token operator">=</span>/root/app/clash<span class="token assign-left variable">ExecStart</span><span class="token operator">=</span>/root/app/clash/clash -d /root/app/clash<span class="token assign-left variable">Restart</span><span class="token operator">=</span>on-abnormal<span class="token assign-left variable">RestartSec</span><span class="token operator">=</span>5s<span class="token assign-left variable">KillMode</span><span class="token operator">=</span>mixed<span class="token assign-left variable">StandardOutput</span><span class="token operator">=</span>null<span class="token assign-left variable">StandardError</span><span class="token operator">=</span>syslog<span class="token punctuation">[</span>Install<span class="token punctuation">]</span><span class="token assign-left variable">WantedBy</span><span class="token operator">=</span>multi-user.target<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><ul><li>复制到指定目录</li></ul><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">cp</span> ./clash.service /etc/systemd/system/clash.servicesystemctl daemon-reload<span class="token comment"># 运行</span>systemctl start clash<span class="token comment"># 开机自启</span>systemctl <span class="token builtin class-name">enable</span> clash<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>⚡⚡⚡ OVER ⚡⚡⚡</p>]]></content>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;💿安装&quot;&gt;&lt;a href=&quot;#💿安装&quot; class=&quot;headerlink&quot; title=&quot;💿安装&quot;&gt;&lt;/a&gt;💿安装&lt;/h1&gt;&lt;pre class=&quot;line-numbers language-bash&quot; data-language=&quot;bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;apt&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;mc&lt;/span&gt; ncdu &lt;span class=&quot;token function&quot;&gt;htop&lt;/span&gt; exa duf proxychains -y&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;</summary>
+    
+    
+    
+    <category term="linux" scheme="https://pomin.xyz/categories/linux/"/>
+    
+    
+    <category term="linux" scheme="https://pomin.xyz/tags/linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux 赋予用户 root 权限，设置 root 密码</title>
+    <link href="https://pomin.xyz/2022/02/12/linux-root-user/"/>
+    <id>https://pomin.xyz/2022/02/12/linux-root-user/</id>
+    <published>2022-02-12T13:34:05.944Z</published>
+    <updated>2022-02-12T13:34:05.944Z</updated>
+    
+    <content type="html"><![CDATA[<div class="note default"><p>问题引出：天大寒，砚冰坚，手指不可屈伸，大冷天的懒得输sudo的密码。。。</p></div><h1 id="🎈赋予用户-root-权限"><a href="#🎈赋予用户-root-权限" class="headerlink" title="🎈赋予用户 root 权限"></a>🎈赋予用户 root 权限</h1><h2 id="查看用户名"><a href="#查看用户名" class="headerlink" title="查看用户名"></a>查看用户名</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">whoami</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><span id="more"></span><h2 id="改写入权限"><a href="#改写入权限" class="headerlink" title="改写入权限"></a>改写入权限</h2><div class="note danger"><p>千万不要使用 <code>sudo chmod 777 /etc/sudoers</code></p><p><mark class="label danger">否则会触发linux的保护而报错：</mark><code>sudo: /etc/sudoers is world writable</code></p></div><ul><li>正确方法：</li></ul><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">chmod</span> u+w /etc/sudoers<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h2 id="编辑-etc-sudoers"><a href="#编辑-etc-sudoers" class="headerlink" title="编辑 /etc/sudoers"></a>编辑 <code>/etc/sudoers</code></h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">vim</span> /etc/sudoers<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>在 root 的下方写入 <code>[用户名]   ALL=(ALL:ALL) ALL</code></li><li>免密码登陆的话使用 <code>[用户名]   ALL=(ALL:ALL) NOPASSWD:ALL</code></li></ul><p><img src="/images/linux-root/sudoers.png" alt="-" loading="lazy"></p><h2 id="关闭写入权限"><a href="#关闭写入权限" class="headerlink" title="关闭写入权限"></a>关闭写入权限</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">chmod</span> u-w /etc/sudoers<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h2 id="附-改写-root-密码"><a href="#附-改写-root-密码" class="headerlink" title="附:改写 root 密码"></a>附:改写 root 密码</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">passwd</span> root<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>⚡⚡⚡ OVER ⚡⚡⚡</p>]]></content>
+    
+    
+    <summary type="html">&lt;div class=&quot;note default&quot;&gt;&lt;p&gt;问题引出：天大寒，砚冰坚，手指不可屈伸，大冷天的懒得输sudo的密码。。。&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;h1 id=&quot;🎈赋予用户-root-权限&quot;&gt;&lt;a href=&quot;#🎈赋予用户-root-权限&quot; class=&quot;headerlink&quot; title=&quot;🎈赋予用户 root 权限&quot;&gt;&lt;/a&gt;🎈赋予用户 root 权限&lt;/h1&gt;&lt;h2 id=&quot;查看用户名&quot;&gt;&lt;a href=&quot;#查看用户名&quot; class=&quot;headerlink&quot; title=&quot;查看用户名&quot;&gt;&lt;/a&gt;查看用户名&lt;/h2&gt;&lt;pre class=&quot;line-numbers language-bash&quot; data-language=&quot;bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;whoami&lt;/span&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;</summary>
+    
+    
+    
+    <category term="linux" scheme="https://pomin.xyz/categories/linux/"/>
+    
+    
+    <category term="linux" scheme="https://pomin.xyz/tags/linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python2.7 安装 pip</title>
+    <link href="https://pomin.xyz/2022/02/12/python-pip-for-python2/"/>
+    <id>https://pomin.xyz/2022/02/12/python-pip-for-python2/</id>
+    <published>2022-02-12T13:32:10.191Z</published>
+    <updated>2022-02-12T13:32:10.191Z</updated>
+    
+    <content type="html"><![CDATA[<div class="note default"><p>问题引出：部分 linux 系统默认安装 python2.7 可能不带 pip 包管理器</p></div><h1 id="pip-python3-安装方式"><a href="#pip-python3-安装方式" class="headerlink" title="pip (python3) 安装方式"></a>pip (python3) 安装方式</h1><blockquote><p>python3 一般自带有 pip</p></blockquote><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 下载脚本</span><span class="token function">wget</span> https://bootstrap.pypa.io/get-pip.py<span class="token comment"># 安装</span>python get-pip.py --force-reinstall<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><h1 id="pip-python2-安装方式"><a href="#pip-python2-安装方式" class="headerlink" title="pip (python2) 安装方式"></a>pip (python2) 安装方式</h1><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">wget</span> --no-check-certificate https://bootstrap.pypa.io/ez_setup.pypython ez_setup.py --insecure<span class="token comment"># 下载脚本</span><span class="token function">wget</span> https://pypi.python.org/packages/11/b6/abcb525026a4be042b486df43905d6893fb04f05aac21c32c638e939e447/pip-9.0.1.tar.gz<span class="token comment">#md5=35f01da33009719497f01a4ba69d63c9</span><span class="token comment"># 解压</span><span class="token function">tar</span> -xvf *.tar.gz<span class="token comment"># 进入目录</span><span class="token builtin class-name">cd</span> pip*<span class="token comment"># 安装</span>python setup.py <span class="token function">install</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>⚡⚡⚡ OVER ⚡⚡⚡</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;div class=&quot;note default&quot;&gt;&lt;p&gt;问题引出：部分 linux 系统默认安装 python2.7 可能不带 pip 包管理器&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;h1 id=&quot;pip-python3-安装方式&quot;&gt;&lt;a href=&quot;#pip-python3-安装方式&quot; </summary>
+      
+    
+    
+    
+    <category term="Python" scheme="https://pomin.xyz/categories/Python/"/>
+    
+    
+    <category term="Python" scheme="https://pomin.xyz/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>WSL2安装出现Error:0x80370102 ???????????????????</title>
+    <link href="https://pomin.xyz/2022/02/12/wsl-wsl2-install/"/>
+    <id>https://pomin.xyz/2022/02/12/wsl-wsl2-install/</id>
+    <published>2022-02-12T12:19:43.168Z</published>
+    <updated>2022-02-12T12:19:43.168Z</updated>
+    
+    <content type="html"><![CDATA[<div class="note default"><p>问题发现：WSL2设置默认安装版本为 2，WSL 安装时出现 Error: 0x80370102 ???????????????????</p></div><span id="more"></span><h1 id="🔑查错"><a href="#🔑查错" class="headerlink" title="🔑查错"></a>🔑查错</h1><ul><li><p>已经启动虚拟机平台</p></li><li><p>系统是 Win10 家庭版， hyper-V 家庭版上该功能不可见</p></li><li><p>执行</p>  <pre class="line-numbers language-bat" data-language="bat"><code class="language-bat">bcdedit &#x2F;set hypervisorlaunchtype auto start<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>  <pre class="line-numbers language-bat" data-language="bat"><code class="language-bat">wsl --set-version Debian 2wsl --set-default-version 2<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li><li><p>问题解决</p></li></ul><p>⚡⚡⚡ OVER ⚡⚡⚡</p>]]></content>
+    
+    
+    <summary type="html">&lt;div class=&quot;note default&quot;&gt;&lt;p&gt;问题发现：WSL2设置默认安装版本为 2，WSL 安装时出现 Error: 0x80370102 ???????????????????&lt;/p&gt;
+&lt;/div&gt;</summary>
+    
+    
+    
+    <category term="Linux" scheme="https://pomin.xyz/categories/Linux/"/>
+    
+    
+    <category term="WSL" scheme="https://pomin.xyz/tags/WSL/"/>
+    
+  </entry>
   
   <entry>
     <title>CMake 学习</title>
@@ -135,29 +246,6 @@
     
     
     
-    
-  </entry>
-  
-  <entry>
-    <title>Linux系统的一些增强工具</title>
-    <link href="https://pomin.xyz/2022/01/28/useful-tools/"/>
-    <id>https://pomin.xyz/2022/01/28/useful-tools/</id>
-    <published>2022-01-28T10:07:14.382Z</published>
-    <updated>2022-01-28T10:07:14.382Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="💿安装"><a href="#💿安装" class="headerlink" title="💿安装"></a>💿安装</h1><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">sudo apt install mc ncdu htop exa duf proxychains zsh -y<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h1 id="mc-文件管理"><a href="#mc-文件管理" class="headerlink" title="mc   : 文件管理"></a>mc   : 文件管理</h1><p><img src="/images/useful-tools/mc.jpg" alt="-" loading="lazy"></p><span id="more"></span><h1 id="ncdu-文件夹大小-du-增强版"><a href="#ncdu-文件夹大小-du-增强版" class="headerlink" title="ncdu : 文件夹大小 du 增强版"></a>ncdu : 文件夹大小 du 增强版</h1><p><img src="/images/useful-tools/ncdu.jpg" alt="-" loading="lazy"></p><h1 id="htop-进程监视-top-增强版"><a href="#htop-进程监视-top-增强版" class="headerlink" title="htop : 进程监视 top 增强版"></a>htop : 进程监视 top 增强版</h1><p><img src="/images/useful-tools/htop.jpg" alt="-" loading="lazy"></p><h1 id="exa-列举文件-ls-增强版"><a href="#exa-列举文件-ls-增强版" class="headerlink" title="exa  : 列举文件 ls 增强版"></a>exa  : 列举文件 ls 增强版</h1><p><img src="/images/useful-tools/exa.jpg" alt="-" loading="lazy"></p><h1 id="duf-列举分区-df-增强版"><a href="#duf-列举分区-df-增强版" class="headerlink" title="duf  : 列举分区 df 增强版"></a>duf  : 列举分区 df 增强版</h1><p><img src="/images/useful-tools/duf.jpg" alt="-" loading="lazy"></p><h1 id="proxychains-简易代理工具"><a href="#proxychains-简易代理工具" class="headerlink" title="proxychains : 简易代理工具"></a>proxychains : 简易代理工具</h1><p><img src="/images/useful-tools/proxychains.jpg" alt="-" loading="lazy"></p><h1 id="zsh-终端强化工具"><a href="#zsh-终端强化工具" class="headerlink" title="zsh  : 终端强化工具"></a>zsh  : 终端强化工具</h1><p><img src="/images/useful-tools/zsh.jpg" alt="-" loading="lazy"></p><hr><h1 id="oh-my-zsh-终端强化神器"><a href="#oh-my-zsh-终端强化神器" class="headerlink" title="oh-my-zsh : 终端强化神器"></a>oh-my-zsh : 终端强化神器</h1><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">---# sh 一键安装sh -c &quot;$(wget https:&#x2F;&#x2F;raw.github.com&#x2F;robbyrussell&#x2F;oh-my-zsh&#x2F;master&#x2F;tools&#x2F;install.sh -O -)&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><h2 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h2><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">---# 自动补全proxychains git clone https:&#x2F;&#x2F;github.com&#x2F;zsh-users&#x2F;zsh-autosuggestions $ZSH_CUSTOM&#x2F;plugins&#x2F;zsh-autosuggestions---# 语法高亮proxychains git clone https:&#x2F;&#x2F;github.com&#x2F;zsh-users&#x2F;zsh-syntax-highlighting.git $ZSH_CUSTOM&#x2F;plugins&#x2F;zsh-syntax-highlighting---# 添加到 ~&#x2F;.zshrcnano ~&#x2F;.zshrc<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><img src="/images/useful-tools/oh-my-zsh.jpg" alt="-" loading="lazy"></p><h2 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h2><p>我使用的是 passion: <a href="https://github.com/ChesterYue/ohmyzsh-theme-passion">https://github.com/ChesterYue/ohmyzsh-theme-passion</a></p><p><img src="/images/useful-tools/zsh-theme.jpg" alt="-" loading="lazy"></p><p>更多主题在: <a href="https://github.com/ohmyzsh/ohmyzsh/wiki/External-themes">https://github.com/ohmyzsh/ohmyzsh/wiki/External-themes</a></p><h2 id="应用设置-！！！！"><a href="#应用设置-！！！！" class="headerlink" title="应用设置 ！！！！"></a>应用设置 ！！！！</h2><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">source ~&#x2F;.zshrc<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><hr><h1 id="KDE-桌面环境"><a href="#KDE-桌面环境" class="headerlink" title="KDE : 桌面环境"></a>KDE : 桌面环境</h1><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"># 简约版sudo apt install kde-plasma-desktop# 完整版# sudo apt install kubuntu-desktop<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><p><img src="/images/useful-tools/kde.jpg" alt="-" loading="lazy"></p><p>⚡⚡⚡ OVER ⚡⚡⚡</p>]]></content>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;💿安装&quot;&gt;&lt;a href=&quot;#💿安装&quot; class=&quot;headerlink&quot; title=&quot;💿安装&quot;&gt;&lt;/a&gt;💿安装&lt;/h1&gt;&lt;pre class=&quot;line-numbers language-shell&quot; data-language=&quot;shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;sudo apt install mc ncdu htop exa duf proxychains zsh -y&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h1 id=&quot;mc-文件管理&quot;&gt;&lt;a href=&quot;#mc-文件管理&quot; class=&quot;headerlink&quot; title=&quot;mc   : 文件管理&quot;&gt;&lt;/a&gt;mc   : 文件管理&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;/images/useful-tools/mc.jpg&quot; alt=&quot;-&quot; loading=&quot;lazy&quot;&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="linux" scheme="https://pomin.xyz/categories/linux/"/>
-    
-    
-    <category term="linux" scheme="https://pomin.xyz/tags/linux/"/>
     
   </entry>
   
