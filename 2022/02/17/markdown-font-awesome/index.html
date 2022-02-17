@@ -22,26 +22,28 @@
   <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"pomin.xyz","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.9.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":"enable","bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":true,"nav":null},"stickytabs":true,"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1}}</script><script src="/js/config.js"></script>
-<meta name="description" content=".......">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Pomin&#39;s Blog">
-<meta property="og:url" content="https://pomin.xyz/categories/Python/index.html">
+<meta name="description" content="问题引出：Markdown 编译完为 html 代码，理论上是可以使用 Font Awesome 图标的   🧡Font Awesome 图标 官网地址 https:&#x2F;&#x2F;fontawesome.com&#x2F; GitHub首页 https:&#x2F;&#x2F;github.com&#x2F;FortAwesome&#x2F;Font-Awesome">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Markdown 支持 Font Awesome 图标">
+<meta property="og:url" content="https://pomin.xyz/2022/02/17/markdown-font-awesome/index.html">
 <meta property="og:site_name" content="Pomin&#39;s Blog">
-<meta property="og:description" content=".......">
+<meta property="og:description" content="问题引出：Markdown 编译完为 html 代码，理论上是可以使用 Font Awesome 图标的   🧡Font Awesome 图标 官网地址 https:&#x2F;&#x2F;fontawesome.com&#x2F; GitHub首页 https:&#x2F;&#x2F;github.com&#x2F;FortAwesome&#x2F;Font-Awesome">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-02-17T07:40:40.727Z">
+<meta property="article:modified_time" content="2022-02-17T07:40:40.727Z">
 <meta property="article:author" content="Pomin">
-<meta property="article:tag" content="操作系统 | 智能车 | STM32 | 物联网 | ESP8266">
+<meta property="article:tag" content="markdown">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://pomin.xyz/categories/Python/">
+<link rel="canonical" href="https://pomin.xyz/2022/02/17/markdown-font-awesome/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"categories/Python/index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://pomin.xyz/2022/02/17/markdown-font-awesome/","path":"2022/02/17/markdown-font-awesome/","title":"Markdown 支持 Font Awesome 图标"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>分类: Python | Pomin's Blog</title>
+<title>Markdown 支持 Font Awesome 图标 | Pomin's Blog</title>
   
 
 
@@ -149,7 +151,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -162,6 +164,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%F0%9F%A7%A1Font-Awesome-%E5%9B%BE%E6%A0%87"><span class="nav-number">1.</span> <span class="nav-text">🧡Font Awesome 图标</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E8%88%AC%E5%AF%BC%E5%85%A5%E4%BD%BF%E7%94%A8-Font-Awesome-%E7%9A%84%E6%96%B9%E6%B3%95"><span class="nav-number">1.1.</span> <span class="nav-text">一般导入使用 Font Awesome 的方法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AF%BC%E5%85%A5%E5%88%B0-markdown-%E4%B8%AD"><span class="nav-number">2.</span> <span class="nav-text">导入到 markdown 中</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -240,70 +243,162 @@
 </noscript>
 
 
-    <div class="main-inner category posts-collapse">
+    <div class="main-inner post posts-expand">
 
 
   
+
+
+<div class="post-block">
   
   
-  <div class="post-block">
-    <div class="post-content">
-      <div class="collection-title">
-        <h1 class="collection-header">Python
-          <small>分类</small>
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://pomin.xyz/2022/02/17/markdown-font-awesome/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/m.jpg">
+      <meta itemprop="name" content="Pomin">
+      <meta itemprop="description" content=".......">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Pomin's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Markdown 支持 Font Awesome 图标
         </h1>
-      </div>
 
-      
-    <div class="collection-year">
-      <span class="collection-header">2022</span>
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-02-17 15:40:40" itemprop="dateCreated datePublished" datetime="2022-02-17T15:40:40+08:00">2022-02-17</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/other/" itemprop="url" rel="index"><span itemprop="name">other</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>500</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <div class="note default"><p>问题引出：Markdown 编译完为 html 代码，理论上是可以使用 Font Awesome 图标的</p>
+</div>
+
+<h1 id="🧡Font-Awesome-图标"><a href="#🧡Font-Awesome-图标" class="headerlink" title="🧡Font Awesome 图标"></a>🧡Font Awesome 图标</h1><blockquote>
+<p>官网地址 <a target="_blank" rel="noopener" href="https://fontawesome.com/">https://fontawesome.com/</a></p>
+<p>GitHub首页 <a target="_blank" rel="noopener" href="https://github.com/FortAwesome/Font-Awesome">https://github.com/FortAwesome/Font-Awesome</a></p>
+</blockquote>
+<span id="more"></span>
+
+<h2 id="一般导入使用-Font-Awesome-的方法"><a href="#一般导入使用-Font-Awesome-的方法" class="headerlink" title="一般导入使用 Font Awesome 的方法"></a>一般导入使用 Font Awesome 的方法</h2><ul>
+<li>在HTML源码中<code>&lt;head&gt;&lt;/head&gt;</code>标签中添加支持</li>
+</ul>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">defer</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://use.fontawesome.com/releases/v5.0.13/js/all.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">defer</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://use.fontawesome.com/releases/v5.0.13/js/v4-shims.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://use.fontawesome.com/releases/v5.0.13/css/all.css<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h1 id="导入到-markdown-中"><a href="#导入到-markdown-中" class="headerlink" title="导入到 markdown 中"></a>导入到 markdown 中</h1>
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2022-02-13T18:43:09+08:00"
-              content="2022-02-13">
-          02-13
-        </time>
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div></div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechat.png" alt="Pomin 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/images/alipay.jpg" alt="Pomin 支付宝">
+        <span>支付宝</span>
       </div>
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/02/13/python-serial-tipserial/" itemprop="url">
-            <span itemprop="name">Python 写的一个串口插入监测工具</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2022-02-12T21:32:10+08:00"
-              content="2022-02-12">
-          02-12
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/02/12/python-pip-for-python2/" itemprop="url">
-            <span itemprop="name">Python2.7 安装 pip</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-    </div>
   </div>
-  
-  
-  
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>Pomin
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://pomin.xyz/2022/02/17/markdown-font-awesome/" title="Markdown 支持 Font Awesome 图标">https://pomin.xyz/2022/02/17/markdown-font-awesome/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/markdown/" rel="tag"><i class="fa fa-tag"></i> markdown</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/02/17/test/" rel="prev" title="">
+                  <i class="fa fa-chevron-left"></i> 
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
 
 </div>
   </main>
