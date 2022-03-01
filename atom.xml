@@ -6,7 +6,7 @@
   <link href="https://pomin.xyz/atom.xml" rel="self"/>
   
   <link href="https://pomin.xyz/"/>
-  <updated>2022-02-17T08:46:37.941Z</updated>
+  <updated>2022-03-01T12:42:13.797Z</updated>
   <id>https://pomin.xyz/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Welcome to my blog site ~~</title>
+    <link href="https://pomin.xyz/2022/03/01/hexo-theme-next/"/>
+    <id>https://pomin.xyz/2022/03/01/hexo-theme-next/</id>
+    <published>2022-03-01T12:42:13.797Z</published>
+    <updated>2022-03-01T12:42:13.797Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="一个正在学习的嵌入式的-Maker"><a href="#一个正在学习的嵌入式的-Maker" class="headerlink" title="一个正在学习的嵌入式的 Maker"></a>一个正在学习的嵌入式的 Maker</h3><ul><li><p>📕  I’m currently learning C++</p></li><li><p>👓 Welcome to <a href="https://www.pomin.top/">my homepage</a></p></li><li><p>📝 CSDN blog <a href="https://blog.csdn.net/pomin_?spm=1000.2115.3001.5343">my csdn blog</a></p></li><li><p>💎 OSHWHub <a href="https://oshwhub.com/pomin">my hardware</a></p></li><li><p>🎈 Ask my mail <a href="1637766030@qq.com">1637766030@qq.com</a></p></li><li><p>📫 How to reach me: qq <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1637766030">1637766030</a></p></li><li><p>Languages and Tools:</p><img style="float: left; padding: 10px;" src="/images/svg/c-original.svg" alt="c" width="40" height="40" /><img style="float: left; padding: 10px;" src="/images/svg/cplusplus-original.svg"alt="cplusplus" width="40" height="40" /><img style="float: left; padding: 10px;" src="/images/svg/css3-original-wordmark.svg" alt="css3" width="40" height="40" /><img style="float: left; padding: 10px;" src="/images/svg/html5-original-wordmark.svg" alt="html5" width="40" height="40" /><img style="float: left; padding: 10px;" src="/images/svg/linux-original.svg" alt="linux" width="40" height="40" /><img style="float: left; padding: 10px;" src="/images/svg/matlab-original.svg" alt="matlab" width="40" height="40" /><img style="float: left; padding: 10px;" src="/images/svg/photoshop-line.svg" alt="photoshop" width="40" height="40" /><img style="float: left; padding: 10px;" src="/images/svg/getpostman-icon.svg" alt="postman" width="40" height="40" /><img style="float: left; padding: 10px;" src="/images/svg/python-original.svg" alt="python" width="40" height="40" /><img style="float: left; padding: 10px;" src="/images/svg/Qt_logo_2016.svg" alt="qt" width="40" height="40" /></li></ul><p>.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;一个正在学习的嵌入式的-Maker&quot;&gt;&lt;a href=&quot;#一个正在学习的嵌入式的-Maker&quot; class=&quot;headerlink&quot; title=&quot;一个正在学习的嵌入式的 Maker&quot;&gt;&lt;/a&gt;一个正在学习的嵌入式的 Maker&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;�</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Markdown 支持 Font Awesome 图标</title>
@@ -281,27 +302,6 @@
     
     
     <category term="linux常见问题" scheme="https://pomin.xyz/tags/linux%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Welcome to my blog site ~~</title>
-    <link href="https://pomin.xyz/2022/01/28/hexo-theme-next/"/>
-    <id>https://pomin.xyz/2022/01/28/hexo-theme-next/</id>
-    <published>2022-01-28T10:42:19.271Z</published>
-    <updated>2022-01-28T10:42:19.271Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="一个正在学习的嵌入式的-Maker"><a href="#一个正在学习的嵌入式的-Maker" class="headerlink" title="一个正在学习的嵌入式的 Maker"></a>一个正在学习的嵌入式的 Maker</h3><ul><li><p>📕  I’m currently learning C++</p></li><li><p>👓 Welcome to <a href="https://www.pomin.xyz/">my homepage</a></p></li><li><p>📝 CSDN blog <a href="https://blog.csdn.net/pomin_?spm=1000.2115.3001.5343">my csdn blog</a></p></li><li><p>💎 OSHWHub <a href="https://oshwhub.com/pomin">my hardware</a></p></li><li><p>🎈 Ask my mail <a href="1637766030@qq.com">1637766030@qq.com</a></p></li><li><p>📫 How to reach me: qq <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1637766030">1637766030</a></p></li><li><p>Languages and Tools:</p><img style="float: left; padding: 10px;" src="/images/svg/c-original.svg" alt="c" width="40" height="40" /><img style="float: left; padding: 10px;" src="/images/svg/cplusplus-original.svg"alt="cplusplus" width="40" height="40" /><img style="float: left; padding: 10px;" src="/images/svg/css3-original-wordmark.svg" alt="css3" width="40" height="40" /><img style="float: left; padding: 10px;" src="/images/svg/html5-original-wordmark.svg" alt="html5" width="40" height="40" /><img style="float: left; padding: 10px;" src="/images/svg/linux-original.svg" alt="linux" width="40" height="40" /><img style="float: left; padding: 10px;" src="/images/svg/matlab-original.svg" alt="matlab" width="40" height="40" /><img style="float: left; padding: 10px;" src="/images/svg/photoshop-line.svg" alt="photoshop" width="40" height="40" /><img style="float: left; padding: 10px;" src="/images/svg/getpostman-icon.svg" alt="postman" width="40" height="40" /><img style="float: left; padding: 10px;" src="/images/svg/python-original.svg" alt="python" width="40" height="40" /><img style="float: left; padding: 10px;" src="/images/svg/Qt_logo_2016.svg" alt="qt" width="40" height="40" /></li></ul><p>.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h3 id=&quot;一个正在学习的嵌入式的-Maker&quot;&gt;&lt;a href=&quot;#一个正在学习的嵌入式的-Maker&quot; class=&quot;headerlink&quot; title=&quot;一个正在学习的嵌入式的 Maker&quot;&gt;&lt;/a&gt;一个正在学习的嵌入式的 Maker&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;�</summary>
-      
-    
-    
-    
     
   </entry>
   
